@@ -1,0 +1,12 @@
+<igx-grid #grid [data]="data | async" [primaryKey]="'ID'" width="835px" height="500px">
+    <igx-column field="ID"></igx-column>
+    <igx-column field="ProductName"></igx-column>
+    <igx-column field="QuantityPerUnit"></igx-column>
+    <igx-column field="SupplierName"></igx-column>
+    <igx-column field="UnitsInStock"></igx-column>
+    <igx-column field="Rating"></igx-column>
+    <igx-paginator #paginator [totalRecords]="totalCount" [(page)]="page" [(perPage)]="perPage"
+        [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity" (pageChange)="paginate($event)"
+        (perPageChange)="perPageChange($event)">
+    </igx-paginator>
+</igx-grid>
