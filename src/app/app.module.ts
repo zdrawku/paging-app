@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { GridComponent } from './grid/grid.component';
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule, IgxActionStripModule, IgxInputGroupModule, IgxFocusModule } from 'igniteui-angular';
 import { RemotePagingService } from './services/remotePaging.service';
 
 @NgModule({
@@ -19,7 +19,10 @@ import { RemotePagingService } from './services/remotePaging.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     IgxGridModule,
-    HttpClientModule
+    HttpClientModule,
+    IgxActionStripModule,
+    IgxInputGroupModule,
+    IgxFocusModule
   ],
   providers: [RemotePagingService],
   bootstrap: [AppComponent]
