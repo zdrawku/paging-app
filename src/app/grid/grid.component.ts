@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { GridPagingMode, IgxGridComponent } from 'igniteui-angular';
+import { GridPagingMode, IgxGridComponent, CellType } from 'igniteui-angular';
 import { Observable } from 'rxjs';
 import { LOCAL_DATA } from '../services/data';
 import { RemotePagingService } from '../services/remotePaging.service';
@@ -49,6 +49,11 @@ export class GridComponent implements OnInit {
       this._perPage = val;
       // Page should be reset on perPage select change
       this.paginate(0);
+  }
+
+  public set temp(val: CellType) {
+    /** Deprecated, will be removed. data is the new property */
+    const temp = val.row.rowData;
   }
 
   public ngOnDestroy() {
